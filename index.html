@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Магазин свежих овощей и фруктов в Цимлянске. Картофель, помидоры, огурцы, лук, яблоки, бананы, апельсины и лимоны.">
+<meta name="theme-color" content="#28543a">
+<title>Овощи и фрукты в Цимлянске | Советская, 22</title>
+<style>
+:root{--bg:#f7f8f2;--paper:#fff;--ink:#20291f;--muted:#697268;--line:#e2e7dc;--green:#28543a;--green2:#eaf1e7;--lime:#d7e7b9;--gold:#e8ae53;--max:1160px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(247,248,242,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:15px;font-weight:900;letter-spacing:.06em;line-height:1.25}.brand span{display:block;color:var(--muted);font-size:11px;letter-spacing:0;font-weight:550;margin-top:4px}.links{display:flex;gap:22px;color:var(--muted);font-size:14px}.links a:hover{color:var(--green)}.phone{font-weight:850;white-space:nowrap}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:13px 19px;border:1px solid var(--green);border-radius:10px;background:var(--green);color:#fff;font-weight:750;transition:.2s}.btn:hover{transform:translateY(-1px);filter:brightness(.96)}.btn.alt{background:transparent;color:var(--green)}.btn.alt:hover{background:var(--green2)}
+.hero{padding:76px 0 62px;display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:center}.tag{font-size:12px;color:var(--green);font-weight:900;letter-spacing:.14em;text-transform:uppercase}.tag:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--gold);margin-right:10px}h1{font-size:clamp(42px,6vw,72px);line-height:1.02;letter-spacing:-.06em;margin:18px 0}.hero p{font-size:18px;color:var(--muted);max-width:590px;margin:0 0 27px}.actions{display:flex;gap:12px;flex-wrap:wrap}.hero-art{min-height:350px;border-radius:24px;background:var(--lime);padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-content:center;transform:rotate(1deg)}.produce{background:#fff;border-radius:18px;padding:18px;text-align:center;box-shadow:0 8px 20px #203b2010}.produce .emoji{font-size:45px;line-height:1.25}.produce strong{display:block;margin-top:7px}.produce span{font-size:12px;color:var(--muted)}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.pill{padding:7px 11px;border-radius:99px;background:var(--green2);color:var(--green);font-size:12px;font-weight:750}
+section{padding:64px 0}.head{max-width:690px;margin-bottom:28px}.head h2{font-size:clamp(30px,4vw,45px);line-height:1.12;letter-spacing:-.045em;margin:0 0 12px}.head p{margin:0;color:var(--muted)}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.product{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:22px;min-height:220px;display:flex;flex-direction:column;transition:.2s}.product:hover{transform:translateY(-3px);box-shadow:0 12px 28px #243c2010}.product .symbol{font-size:36px;line-height:1.1}.product h3{margin:15px 0 5px;font-size:19px}.product p{margin:0;color:var(--muted);font-size:14px}.price{margin-top:auto;padding-top:16px;color:var(--green);font-weight:900;font-size:23px;letter-spacing:-.03em}.price span{font-size:12px;font-weight:650;letter-spacing:0;color:var(--muted)}
+.notice{margin-top:20px;background:var(--green2);border-radius:12px;padding:15px 18px;color:#385540;font-size:13px}
+.green{background:var(--green);color:white}.green .head p{color:#dce6dc}.columns{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px;align-items:start}.benefits{display:grid;grid-template-columns:1fr 1fr;gap:12px}.benefit{border:1px solid rgba(255,255,255,.22);border-radius:13px;padding:19px}.benefit b{display:block;margin-bottom:5px}.benefit span{font-size:13px;color:#dce6dc}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.info-card{background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:24px}.info-card h3{margin:0 0 10px;font-size:20px}.info-card p,.info-card li{font-size:14px;color:var(--muted)}.info-card p{margin:0 0 10px}.info-card ul{padding-left:19px;margin:10px 0 0}.info-card li+li{margin-top:6px}.storage-list{display:grid;gap:12px}.storage-row{display:grid;grid-template-columns:46px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}.storage-row:last-child{border-bottom:0}.storage-row .emoji{font-size:30px}.storage-row b{display:block}.storage-row span{display:block;font-size:13px;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{padding:20px;border:1px solid var(--line);border-radius:14px;background:var(--paper)}.step .n{font-size:12px;font-weight:900;color:var(--green);letter-spacing:.12em}.step h3{margin:9px 0 6px;font-size:18px}.step p{font-size:14px;color:var(--muted);margin:0}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:34px;background:var(--paper);border:1px solid var(--line);border-radius:18px}.contact p{color:var(--muted)}.details{display:grid;align-content:start}.detail{padding:13px 0;border-bottom:1px solid var(--line)}.detail small{display:block;color:var(--muted);font-size:12px}.detail strong{font-size:16px;overflow-wrap:anywhere}.fineprint{font-size:12px;color:var(--muted);margin-top:18px}
+.faq{display:grid;gap:10px}.faq details{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:17px 19px}.faq summary{font-weight:800;cursor:pointer}.faq details p{font-size:14px;color:var(--muted);margin:12px 0 0}
+footer{padding:26px 0;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.legal{margin-top:15px;max-width:850px;line-height:1.6}
+@media(max-width:980px){.products{grid-template-columns:repeat(2,1fr)}.hero-art{min-height:300px}.links{gap:12px}}
+@media(max-width:760px){.wrap{width:calc(100% - 28px)}.nav{min-height:68px}.links{display:none}.phone{font-size:13px}.hero{grid-template-columns:1fr;padding:52px 0 40px;gap:26px}.hero p{font-size:16px}.hero-art{min-height:unset;padding:16px;gap:9px}.produce{padding:13px}.produce .emoji{font-size:36px}.products,.columns,.steps,.contact,.info-grid{grid-template-columns:1fr}.products{gap:10px}.product{min-height:unset}.product .symbol{font-size:30px}.product .price{padding-top:12px}section{padding:48px 0}.benefits{grid-template-columns:1fr 1fr}.contact{padding:23px}.info-card{padding:20px}}
+@media(max-width:390px){.brand{font-size:13px}.phone{font-size:12px}.benefits{grid-template-columns:1fr}.hero-art{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#top">ОВОЩИ · ФРУКТЫ<span>Свежие продукты в Цимлянске</span></a>
+<nav class="links" aria-label="Основная навигация"><a href="#catalog">Каталог</a><a href="#storage">Хранение</a><a href="#returns">Возврат</a><a href="#contacts">Контакты</a></nav>
+<a class="phone" href="tel:+79276297800">+7 927 629-78-00</a>
+</div></header>
+<main id="top">
+<div class="wrap hero">
+<div><div class="tag">Магазин овощей и фруктов</div><h1>Свежие продукты<br>на каждый день.</h1>
+<p>Овощи и фрукты для домашнего стола: на салаты, гарниры, перекусы и любимые рецепты.</p>
+<div class="actions"><a class="btn" href="tel:+79276297800">☎ Позвонить в магазин</a><a class="btn alt" href="#contacts">Адрес и контакты</a></div>
+<div class="pills"><span class="pill">Овощи</span><span class="pill">Фрукты</span><span class="pill">Сезонный ассортимент</span></div></div>
+<div class="hero-art" aria-label="Овощи и фрукты"><div class="produce"><div class="emoji">🍎</div><strong>Фрукты</strong><span>На каждый день</span></div><div class="produce"><div class="emoji">🥒</div><strong>Овощи</strong><span>Для ваших блюд</span></div><div class="produce"><div class="emoji">🍊</div><strong>Цитрусовые</strong><span>Яркий вкус</span></div><div class="produce"><div class="emoji">🥔</div><strong>Базовые продукты</strong><span>Для домашней кухни</span></div></div>
+</div>
+<section id="catalog"><div class="wrap"><div class="head"><h2>Каталог и цены</h2><p>Выберите продукты для повседневных покупок.</p></div>
+<div class="products">
+<article class="product"><div class="symbol">🥔</div><h3>Картофель</h3><p>Для супов, пюре, гарниров и запекания.</p><div class="price">45 ₽ <span>/ кг</span></div></article>
+<article class="product"><div class="symbol">🍅</div><h3>Помидоры</h3><p>Для свежих салатов, закусок и горячих блюд.</p><div class="price">210 ₽ <span>/ кг</span></div></article>
+<article class="product"><div class="symbol">🥒</div><h3>Огурцы</h3><p>Для салатов и лёгких домашних блюд.</p><div class="price">130 ₽ <span>/ кг</span></div></article>
+<article class="product"><div class="symbol">🧅</div><h3>Лук</h3><p>Для супов, соусов, гарниров и маринадов.</p><div class="price">50 ₽ <span>/ кг</span></div></article>
+<article class="product"><div class="symbol">🍎</div><h3>Яблоки</h3><p>Для перекусов, выпечки и фруктовых салатов.</p><div class="price">150 ₽ <span>/ кг</span></div></article>
+<article class="product"><div class="symbol">🍌</div><h3>Бананы</h3><p>Для завтрака, перекуса и десертов.</p><div class="price">140 ₽ <span>/ кг</span></div></article>
+<article class="product"><div class="symbol">🍊</div><h3>Апельсины</h3><p>Сочные цитрусовые для перекусов и напитков.</p><div class="price">200 ₽ <span>/ кг</span></div></article>
+<article class="product"><div class="symbol">🍋</div><h3>Лимоны</h3><p>Для чая, напитков, соусов и приготовления блюд.</p><div class="price">250 ₽ <span>/ кг</span></div></article>
+</div>
+<div class="notice">Цены указаны за 1 кг. Итоговая стоимость рассчитывается по фактическому весу. Цена и наличие могут меняться в зависимости от сорта, сезона и поставки; актуальная цена указывается в магазине до покупки.</div>
+</div></section>
+<section class="green" id="about"><div class="wrap columns"><div class="head"><h2>Продукты для вашего стола</h2><p>Поддерживаем повседневный ассортимент овощей и фруктов. Состав предложения зависит от сезона и поставок.</p></div><div class="benefits"><div class="benefit"><b>Повседневный выбор</b><span>Овощи и фрукты для привычных домашних блюд.</span></div><div class="benefit"><b>Цена за килограмм</b><span>Стоимость удобно рассчитать по весу покупки.</span></div><div class="benefit"><b>Сезонные товары</b><span>Ассортимент может меняться в течение года.</span></div><div class="benefit"><b>Связь с магазином</b><span>Позвоните, чтобы узнать наличие перед визитом.</span></div></div></div></section>
+<section id="storage"><div class="wrap"><div class="head"><h2>Как хранить овощи и фрукты</h2><p>Срок хранения зависит от свежести при покупке, температуры, влажности и условий дома. Ниже приведены общие рекомендации, а не гарантия конкретного срока годности.</p></div>
+<div class="info-grid">
+<div class="info-card"><h3>Условия хранения</h3><div class="storage-list">
+<div class="storage-row"><div class="emoji">🥔</div><div><b>Картофель</b><span>Хранить в тёмном, сухом, прохладном и хорошо проветриваемом месте. Беречь от света и сырости.</span></div></div>
+<div class="storage-row"><div class="emoji">🧅</div><div><b>Лук</b><span>Держать в сухом, проветриваемом месте, отдельно от источников влаги.</span></div></div>
+<div class="storage-row"><div class="emoji">🍅</div><div><b>Помидоры</b><span>Спелые плоды лучше употребить в ближайшие дни. Недозрелые можно дозаривать при комнатной температуре.</span></div></div>
+<div class="storage-row"><div class="emoji">🥒</div><div><b>Огурцы</b><span>Хранить в холодильнике, не допуская замораживания и излишней влаги.</span></div></div>
+</div></div>
+<div class="info-card"><h3>Фрукты и цитрусовые</h3><div class="storage-list">
+<div class="storage-row"><div class="emoji">🍎</div><div><b>Яблоки</b><span>Хранить в прохладном месте или в холодильнике. Регулярно удалять повреждённые плоды.</span></div></div>
+<div class="storage-row"><div class="emoji">🍌</div><div><b>Бананы</b><span>Держать при комнатной температуре, вдали от прямого солнца и сильного холода.</span></div></div>
+<div class="storage-row"><div class="emoji">🍊</div><div><b>Апельсины</b><span>Хранить в прохладном проветриваемом месте или в холодильнике, избегать конденсата.</span></div></div>
+<div class="storage-row"><div class="emoji">🍋</div><div><b>Лимоны</b><span>Хранить в прохладном месте или холодильнике. Не оставлять надолго во влажном закрытом пакете.</span></div></div>
+</div></div></div>
+<div class="notice">Перед употреблением тщательно мойте овощи и фрукты проточной водой. Не употребляйте продукты с плесенью, признаками гниения, неприятным запахом или другими признаками порчи.</div>
+</div></section>
+<section id="returns"><div class="wrap"><div class="head"><h2>Качество, обмен и возврат</h2><p>Мы заинтересованы в том, чтобы покупка была качественной и безопасной.</p></div>
+<div class="info-grid">
+<div class="info-card"><h3>Если с продуктом что-то не так</h3><p>Если после покупки вы обнаружили признаки порчи или другой недостаток, пожалуйста, как можно скорее обратитесь к продавцу.</p><ul><li>Сохраните чек, если он есть, или сообщите дату и примерное время покупки.</li><li>По возможности сохраните продукт и упаковку до рассмотрения обращения.</li><li>Опишите проблему и покажите товар продавцу для проверки.</li><li>Обращение рассматривается в соответствии с законодательством Российской Федерации.</li></ul></div>
+<div class="info-card"><h3>Продукты надлежащего качества</h3><p>Продовольственные товары надлежащего качества, как правило, не подлежат обмену только потому, что покупатель передумал или выбрал не тот товар. Это не ограничивает права покупателя, если у товара обнаружен недостаток.</p><p>При наличии недостатка продавец рассмотрит обращение и применит предусмотренный законом способ урегулирования ситуации.</p></div>
+</div></div></section>
+<section id="purchase"><div class="wrap"><div class="head"><h2>Покупка в магазине</h2><p>Несколько простых шагов, чтобы покупка прошла удобно.</p></div><div class="steps">
+<div class="step"><div class="n">01 / ВЫБОР</div><h3>Выберите продукты</h3><p>Посмотрите ассортимент и уточните наличие по телефону, если нужно.</p></div>
+<div class="step"><div class="n">02 / ВЗВЕШИВАНИЕ</div><h3>Проверьте вес и цену</h3><p>Стоимость покупки рассчитывается по фактическому весу и цене за единицу товара.</p></div>
+<div class="step"><div class="n">03 / ОПЛАТА</div><h3>Завершите покупку</h3><p>Перед оплатой вы можете уточнить стоимость и проверить выбранные продукты.</p></div>
+</div></div></section>
+<section id="faq"><div class="wrap"><div class="head"><h2>Частые вопросы</h2></div><div class="faq">
+<details><summary>Все ли товары из каталога есть в наличии?</summary><p>Наличие зависит от поставок и сезона. Перед визитом можно позвонить в магазин и уточнить ассортимент.</p></details>
+<details><summary>Цена указана за килограмм?</summary><p>Да, цены в каталоге указаны за 1 кг. Итоговая сумма зависит от фактического веса покупки и цены, действующей в магазине.</p></details>
+<details><summary>Можно ли вернуть испорченный товар?</summary><p>Если вы обнаружили недостаток, обратитесь к продавцу как можно скорее. Обращение рассматривается с учётом обстоятельств и требований законодательства Российской Федерации.</p></details>
+<details><summary>Какой срок хранения у свежих продуктов?</summary><p>У свежих овощей и фруктов нет единого срока хранения для всех условий. Он зависит от сорта, зрелости, состояния продукта и температуры хранения. Используйте рекомендации на этой странице и не употребляйте испорченные продукты.</p></details>
+</div></div></section>
+<section id="contacts"><div class="wrap"><div class="contact"><div><div class="tag">Контакты</div><h2 style="margin-top:16px">Ждём вас в магазине</h2><p>Позвоните, чтобы уточнить ассортимент, цены и режим работы.</p><div class="actions"><a class="btn" href="tel:+79276297800">☎ +7 927 629-78-00</a><a class="btn alt" href="sms:+79276297800">Написать SMS</a></div></div>
+<div class="details"><div class="detail"><small>Адрес магазина</small><strong>г. Цимлянск, ул. Советская, 22</strong></div><div class="detail"><small>Контактное лицо</small><strong>Лазарев Леонид Евгеньевич</strong></div><div class="detail"><small>Телефон</small><strong><a href="tel:+79276297800">+7 927 629-78-00</a></strong></div><div class="detail"><small>ИНН</small><strong>613703244263</strong></div></div></div>
+</div></section>
+</main>
+<footer><div class="wrap"><div class="foot"><span>© <span id="year"></span> Магазин овощей и фруктов</span><span>Цимлянск · Советская, 22 · +7 927 629-78-00</span></div>
+<div class="legal">Информация на сайте предназначена для ознакомления с ассортиментом магазина. Условия хранения являются общими рекомендациями. Цены и наличие могут изменяться; актуальная стоимость сообщается покупателю до покупки. Права покупателя при обнаружении недостатков товара регулируются законодательством Российской Федерации.</div></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
